@@ -1,0 +1,5 @@
+
+route_name_test:
+    resource: "../src/Controller"
+    prefix: /
+    type: annotation

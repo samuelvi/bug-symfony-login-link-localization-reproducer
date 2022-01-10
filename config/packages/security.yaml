@@ -1,0 +1,20 @@
+# config/packages/security.yaml
+security:
+
+    enable_authenticator_manager: true
+
+    encoders:
+        App\Entity\User:
+            algorithm: auto
+
+    providers:
+        user_provider:
+            entity:
+                class: 'App\Entity\User'
+                property: 'email'
+
+    firewalls:
+        main:
+            login_link:
+                check_route: login_check
+                signature_properties: [id, email]

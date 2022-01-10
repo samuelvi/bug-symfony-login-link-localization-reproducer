@@ -1,0 +1,12 @@
+
+yaml_i18n_routes:
+    resource: "./localized_routes.yaml"
+    prefix: /{_locale}
+    requirements:
+        _locale: "[a-z]{2}(?:-[a-z]{2}|_[A-Z]{2})"
+    defaults:
+        _locale: "en-us"
+
+yaml_i18n_routes_root:
+    resource: "./localized_routes.yaml"
+    name_prefix: /
